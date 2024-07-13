@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:my_travel/models/location.dart';
 
 class PlaceButton extends StatelessWidget {
   const PlaceButton(this.location, {super.key});
 
-  final String location;
+  final Location location;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class PlaceButton extends StatelessWidget {
         children: [
           ClipOval(
             child: Image.asset(
-              'assets/img/salalah.jpeg',
+              'assets/img/${location.image}',
               width: 60,
               height: 60,
               fit: BoxFit.cover,
@@ -26,7 +27,7 @@ class PlaceButton extends StatelessWidget {
           ),
           const SizedBox(width: 10),
           Text(
-            location,
+            location.name,
             style: TextStyle(fontSize: 16),
           ),
           const SizedBox(
