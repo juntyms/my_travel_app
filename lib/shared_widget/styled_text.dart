@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StyledText extends StatelessWidget {
@@ -27,7 +28,9 @@ class StyledTitle extends StatelessWidget {
     return Text(
       text.toUpperCase(),
       style: GoogleFonts.ibmPlexSans(
-        textStyle: Theme.of(context).textTheme.titleMedium,
+        textStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
+              backgroundColor: Colors.transparent,
+            ),
       ),
     );
   }
