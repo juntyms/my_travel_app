@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_travel/screens/home/place_button.dart';
+import 'package:my_travel/shared_widget/styled_text.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -15,18 +16,12 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My Travels'),
+        title: const StyledHeading('My Travels'),
       ),
       body: Column(
         children: [
           // Rigions
-          const Text(
-            'Regions to visit',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          const StyledTitle('Regions to visit'),
           Container(
             color: Colors.white,
             padding: const EdgeInsets.all(16),
@@ -44,13 +39,7 @@ class _HomeState extends State<Home> {
           ),
           // List of Places
 
-          const Text(
-            'Recommended',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          const StyledTitle('Recommended'),
           Container(
             color: Colors.amber,
             padding: const EdgeInsets.all(16),
